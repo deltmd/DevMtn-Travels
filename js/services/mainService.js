@@ -1,5 +1,12 @@
 angular.module('devmtnTravel').service('mainSrv', function(){
+    this.getId = function(ids, locations){
+      for (var i = 0; i < locations.length; i++) {
+        if(parseInt(ids) === locations[i].id){
+          return locations[i]
+        }
+      }
 
+    }
     this.travelInfo = [{
         city: 'New York',
         country: 'United States',
